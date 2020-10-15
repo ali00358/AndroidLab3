@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Android Labs</string>
+    <string name="hello_message">Hello World!</string>
+    <string name="ButtonText">I\'m a button</string>
+    <string name="text1">Look at my GUI</string>
+    <string name="clickHere">CLICK HERE</string>
+    <string name="check">Check this out!</string>
+    <string name="switchText">Switch on/off</string>
+    <string name="toastMessage">Here is more information</string>
+    <string name="snack1">The switch is now </string>
+    <string name="snackOn">on</string>
+    <string name="snackOff">off</string>
+    <string name="hint">Type here</string>
+    <string name="emailLabel">Enter your email address:</string>
+    <string name="emailPlaceholder">Type email here</string>
+    <string name="passwordLabel">Type your password:</string>
+    <string name="loginButton">LOGIN</string>
+    <string name="profileHeader">Your profile</string>
+    <string name="profileNameLabel">Your name:</string>
+    <string name="profileNamePlaceholder">Enter your name</string>
+    <string name="profileEmailLabel">Your email:</string>
+    <string name="profileEmailPlaceholder">Enter your email</string>
+    <string name="profilePictureLabel">Your picture:</string>
+    <string name="profilePictureInstructions">Click the button above to take your picture</string>
+    <string name="goChat">Go to chat</string>
+    <string name="sendButton">Send</string>
+    <string name="receiveButton">Receive</string>
+    <string name="alertDialogTitle">Delete Message</string>
+    <string name="alertMessageOne">Do you want to delete this?</string>
+    <string name="positiveButton">Yes, I want to</string>
+    <string name="negativeButton">No, I don\'t want to</string>
+    <string name="toastDeleteMessage">Message deleted</string>
+
+
+</resources>

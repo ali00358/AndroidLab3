@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text1"
+        android:textSize="30sp"
+
+        />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="@string/clickHere"
+        android:layout_below="@+id/text1"
+        />
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check"
+        android:textSize="18sp"
+        android:layout_below="@+id/text1"
+        android:layout_toRightOf="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+
+        />
+    <ImageButton
+        android:id="@+id/flag"
+        android:layout_width="215sp"
+        android:layout_height="100sp"
+        android:src="@drawable/flag"
+        android:layout_below="@+id/button1"
+        />
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/switchText"
+        android:layout_toRightOf="@+id/flag"
+        android:layout_alignTop="@+id/flag"
+
+        />
+    <EditText
+        android:id="@+id/inputtext"
+        android:hint="@string/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|textCapWords"
+        android:layout_below="@+id/flag"/>
+</RelativeLayout>

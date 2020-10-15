@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Labs Android</string>
+    <string name="hello_message">Bonjour le monde!</string>
+    <string name="ButtonText">Je suis un bouton</string>
+    <string name="text1">Regardez mon GUI!</string>
+    <string name="clickHere">CLIQUEZ ICI</string>
+    <string name="check">Voila!</string>
+    <string name="switchText">Allumer/éteindre</string>
+    <string name="toastMessage">Pour plus d\'information, allez ici</string>
+    <string name="snack1">L\'interrupteur est maintenant </string>
+    <string name="snackOn">allumé</string>
+    <string name="snackOff">éteint</string>
+    <string name="hint">Saisez ici</string>
+    <string name="emailLabel">Bôite de courriel:</string>
+    <string name="emailPlaceholder">Saisez votre bôite de courriel ici</string>
+    <string name="passwordLabel">Mot de passe:</string>
+    <string name="loginButton">SE CONNECTER</string>
+    <string name="profileHeader">Votre profile</string>
+    <string name="profileNameLabel">Votre nom:</string>
+    <string name="profileNamePlaceholder">Saisez votre nom</string>
+    <string name="profileEmailLabel">Bôite de courriel:</string>
+    <string name="profileEmailPlaceholder">Saisez votre bôite de courriel</string>
+    <string name="profilePictureLabel">Votre picture:</string>
+    <string name="profilePictureInstructions">Cliquez le bouton ci-dessus pour prendre votre photo</string>
+    <string name="goChat">Clavarder</string>
+    <string name="sendButton">Envoyer</string>
+    <string name="receiveButton">Récevoir</string>
+    <string name="alertDialogTitle">Supprimer message</string>
+    <string name="alertMessageOne">Voulez-vous supprimmer ce message?</string>
+    <string name="positiveButton">Oui, je veux</string>
+    <string name="negativeButton">Non, je ne veux pas</string>
+    <string name="toastDeleteMessage">Supprimmé</string>
+
+
+</resources>
