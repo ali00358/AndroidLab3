@@ -2,6 +2,7 @@ package com.example.androidlab2;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -19,23 +20,27 @@ public class DBOpener extends SQLiteOpenHelper {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
-    @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COL_TEXT + " text,"
                 + COL_OUTGOING  + " INTEGER);");
 
         System.out.println("in on create");
+
+
+        int version = db.getVersion();
+
+        Cursor cursor = db.query("MESSAGES", null, null, null, null, null, null);
+        printCursor(cursor,version);
+        //Log.e("Cursor Object", DatabaseUtils.dumpCursorToString(cursor));
     }
 
-    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 
         onCreate(db);
     }
 
-    @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL( "DROP TABLE IF EXISTS " + TABLE_NAME);
 

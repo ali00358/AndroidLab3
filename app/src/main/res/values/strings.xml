@@ -15,6 +15,7 @@
     <string name="emailPlaceholder">Type email here</string>
     <string name="passwordLabel">Type your password:</string>
     <string name="loginButton">LOGIN</string>
+    <string name="logButton">LOG File</string>
     <string name="profileHeader">Your profile</string>
     <string name="profileNameLabel">Your name:</string>
     <string name="profileNamePlaceholder">Enter your name</string>
@@ -23,6 +24,7 @@
     <string name="profilePictureLabel">Your picture:</string>
     <string name="profilePictureInstructions">Click the button above to take your picture</string>
     <string name="goChat">Go to chat</string>
+    <string name="goLog">Go to log file</string>
     <string name="sendButton">Send</string>
     <string name="receiveButton">Receive</string>
     <string name="alertDialogTitle">Delete Message</string>

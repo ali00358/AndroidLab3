@@ -16,6 +16,7 @@
     <string name="emailPlaceholder">Saisez votre bôite de courriel ici</string>
     <string name="passwordLabel">Mot de passe:</string>
     <string name="loginButton">SE CONNECTER</string>
+    <string name="logButton">Fil de Log</string>
     <string name="profileHeader">Votre profile</string>
     <string name="profileNameLabel">Votre nom:</string>
     <string name="profileNamePlaceholder">Saisez votre nom</string>
@@ -24,6 +25,7 @@
     <string name="profilePictureLabel">Votre picture:</string>
     <string name="profilePictureInstructions">Cliquez le bouton ci-dessus pour prendre votre photo</string>
     <string name="goChat">Clavarder</string>
+    <string name="goLog">Fil de Log</string>
     <string name="sendButton">Envoyer</string>
     <string name="receiveButton">Récevoir</string>
     <string name="alertDialogTitle">Supprimer message</string>

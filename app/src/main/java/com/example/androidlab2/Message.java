@@ -10,7 +10,6 @@ public class Message {
         this.id = id;
         this.message = message;
 
-        //ternary operator to assign boolean to outgoing
         this.isSent = (outgoing == 1)? true : false;
     }
 
