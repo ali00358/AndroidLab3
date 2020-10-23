@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class WeatherForecast extends AppCompatActivity {
 
@@ -88,7 +89,7 @@ public class WeatherForecast extends AppCompatActivity {
                 URL urlForUV = new URL("http://api.openweathermap.org/data/2.5/uvi?appid=7e943c97096a9784391a981c4d878b22&lat=45.348945&lon=-75.759389");
                 urlConnection = (HttpURLConnection) urlForUV.openConnection();
                 response = urlConnection.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(response, "UTF-8"), 8);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(response, StandardCharsets.UTF_8), 8);
                 StringBuilder sb = new StringBuilder();
 
                 String line;
