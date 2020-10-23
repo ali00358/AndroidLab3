@@ -2,6 +2,7 @@ package com.example.androidlab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -20,7 +21,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ChatActivity extends AppCompatActivity {
-    //instantiate a private array for objects of Message class
     private ArrayList<Message> messageArr = new ArrayList<>();
     MyListAdapter myAdapter; //adapter to control items in the list view
     SQLiteDatabase db;
@@ -30,48 +30,37 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_linear);
 
-        //loadDataFromDatabase and populate messageArr
         loadMessagesFromDatabase();
 
-        //find view and set adapter
-        ListView messages = (ListView) findViewById(R.id.messages);
+        ListView messages = findViewById(R.id.messages);
         messages.setAdapter(myAdapter = new MyListAdapter());
 
-        //set on item long click listener on list view
         messages.setOnItemLongClickListener( (p, b, pos, id) -> {
-            deleteMessage(pos); //call delete message function on long click
+            deleteMessage(pos);
             return true;
         });
 
-        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText = findViewById(R.id.editText);
 
-        //get send button
-        Button sendBtn = (Button) findViewById(R.id.sendButton);
-        //set listener to create a new outgoing message (outgoing is true by default)
+        Button sendBtn = findViewById(R.id.sendButton);
         sendBtn.setOnClickListener( (click) -> {
             String text = editText.getText().toString();
 
-            //insert into database and obtain new id
             ContentValues row = new ContentValues();
             row.put(DBOpener.COL_TEXT, text);
-            row.put(DBOpener.COL_OUTGOING, 1); //1 to signify true
+            row.put(DBOpener.COL_OUTGOING, 1);
 
-            //insert query
             long newID = db.insert(DBOpener.TABLE_NAME, null, row);
 
-            //create new messge object and add to array
             Message newMessage = new Message(newID, text);
             editText.setText("");
             messageArr.add(newMessage);
             myAdapter.notifyDataSetChanged();
         });
 
-        //get receive button
-        Button receiveBtn = (Button) findViewById(R.id.receiveButton);
-        //set listener to create a new incoming message (outgoing boolean set to false)
+        Button receiveBtn = findViewById(R.id.receiveButton);
         receiveBtn.setOnClickListener( (click) -> {
             String text = editText.getText().toString();
-            //insert into database and obtain new id
             ContentValues row = new ContentValues();
             row.put(DBOpener.COL_TEXT, text);
             row.put(DBOpener.COL_OUTGOING, 0); //0 to signify false
@@ -90,12 +79,8 @@ public class ChatActivity extends AppCompatActivity {
     private void loadMessagesFromDatabase(){
         DBOpener opener = new DBOpener(this);
 
-        //get writable database and assign to db
         db = opener.getWritableDatabase();
 
-        //get all the messages that have been saved
-
-        //query and return a cursor
         Cursor result = db.rawQuery("SELECT * FROM " + DBOpener.TABLE_NAME, null);
         DBOpener.printCursor(result, db.getVersion());
 
@@ -127,59 +112,46 @@ public class ChatActivity extends AppCompatActivity {
             return messageArr.size();
         }
 
-        @Override
         public Message getItem(int position) {
             return messageArr.get(position);
         }
 
-        @Override
-        //modified to return the actual db ID
         public long getItemId(int position) {
             return getItem(position).getId();
         }
 
         @Override
         public View getView(int position, View old, ViewGroup parent) {
-            //get the message at the position
+
             Message message = messageArr.get(position);
-            //get the inflater
             LayoutInflater inflater = getLayoutInflater();
 
-            //if the message is outgoing, inflate the send_message_row layout
-            //if the message is incoming, inflate the receive_message_row layout
             View newView = (message.isOutgoing())?
                     inflater.inflate(R.layout.send_message_row, parent, false) :
                     inflater.inflate(R.layout.receive_message_row, parent, false);
 
-            //obtain the text view from the inflated view
             TextView tView = newView.findViewById(R.id.message);
-            //set the message in the text view to be the message obtained from the array
             tView.setText(message.getMessage());
 
-            //set on long click listener on the text view to display dialog
             tView.setOnLongClickListener(v -> {
                 deleteMessage(position);
                 return true;
             });
 
-            //return the inflated view
             return newView;
         }
     }
 
-    //create a delete contact method
+    @SuppressLint("SetTextI18n")
     protected void deleteMessage(int position){
         Message selectedMessage = messageArr.get(position);
 
-        //inflate the delete contact view
-        View deleteContactView = getLayoutInflater().inflate(R.layout.delete_message_view, null);
+        @SuppressLint("InflateParams") View deleteContactView = getLayoutInflater().inflate(R.layout.delete_message_view, null);
 
-        //get the text views
         TextView messageRow = deleteContactView.findViewById(R.id.selectedMessageRow);
         TextView messageID = deleteContactView.findViewById(R.id.selectedMessageID);
         TextView messageText = deleteContactView.findViewById(R.id.selectedMessageText);
 
-        //set the text to the selected message
         messageRow.setText("Position: " + position);
         messageID.setText("Id: " + selectedMessage.getId());
         messageText.setText(selectedMessage.getMessage());
@@ -200,7 +172,7 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
-    //create a delete method from database
+    @SuppressLint("Recycle")
     protected void deleteFromDB(Message m){
         db.rawQuery("DELETE FROM " + DBOpener.TABLE_NAME + " WHERE _id = ?", new String[]{Long.toString(m.getId())});
     }

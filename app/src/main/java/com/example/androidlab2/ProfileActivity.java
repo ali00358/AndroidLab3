@@ -16,22 +16,21 @@ public class ProfileActivity extends AppCompatActivity {
 
     ImageButton imgButton = null;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.e(ACTIVITY_NAME, "In function: onCreate");
         setContentView(R.layout.activity_profile_linear);
 
-        imgButton = (ImageButton) findViewById(R.id.imageButton);
-        imgButton.setOnClickListener( click -> {dispatchTakePictureIntent();});
+        imgButton = findViewById(R.id.imageButton);
+        imgButton.setOnClickListener( click -> dispatchTakePictureIntent());
 
-        //get the newly added button and use to start chat activity
-        Button chatButton = (Button) findViewById(R.id.chatButton);
+        Button chatButton = findViewById(R.id.chatButton);
         Intent nextPage = new Intent(this, ChatActivity.class);
-        chatButton.setOnClickListener( (click) -> {
-            startActivity(nextPage);
-        });
+        chatButton.setOnClickListener( (click) -> startActivity(nextPage));
 
+        Button weatherButton = findViewById(R.id.weatherButton);
+        Intent weatherForecast = new Intent(this, WeatherForecast.class);
+        weatherButton.setOnClickListener((click) -> startActivity(weatherForecast));
     }
 
     @Override
@@ -80,6 +79,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
+            assert extras != null;
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imgButton.setImageBitmap(imageBitmap);
         }

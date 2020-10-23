@@ -1,5 +1,6 @@
 package com.example.androidlab2;
 
+
 public class Message {
 
     private long id;
@@ -10,7 +11,7 @@ public class Message {
         this.id = id;
         this.message = message;
 
-        this.isSent = (outgoing == 1)? true : false;
+        this.isSent = outgoing == 1;
     }
 
     Message(long id, String message){
@@ -26,7 +27,7 @@ public class Message {
         this.message = message;
     }
 
-    public String getMessage() {
+    String getMessage() {
         return message;
     }
 
@@ -34,7 +35,7 @@ public class Message {
         this.message = message;
     }
 
-    public boolean isOutgoing() {
+    boolean isOutgoing() {
         return isSent ;
     }
 

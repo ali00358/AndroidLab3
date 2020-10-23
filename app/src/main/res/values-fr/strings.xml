@@ -33,6 +33,9 @@
     <string name="positiveButton">Oui, je veux</string>
     <string name="negativeButton">Non, je ne veux pas</string>
     <string name="toastDeleteMessage">Supprimmé</string>
-
-
+    <string name="weather">Prévisions Météorologiques</string>
+    <string name="curTemp">Température actuelle</string>
+    <string name="minTemp">Température minimale</string>
+    <string name="maxTemp">Température maximale</string>
+    <string name="uv">Évaluation UV</string>
 </resources>
