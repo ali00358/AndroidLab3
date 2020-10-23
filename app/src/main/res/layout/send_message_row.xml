@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <TextView
         android:id="@+id/message"
@@ -16,7 +21,7 @@
         android:src="@drawable/female"
         android:focusableInTouchMode="false"
         android:focusable="false"
-        android:id="@+id/imgButton"/>
-
-
+        android:id="@+id/imgButton"
+        android:contentDescription="ImageWoman"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

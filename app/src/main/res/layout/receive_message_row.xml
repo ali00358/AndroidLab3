@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -9,11 +14,12 @@
         android:src="@drawable/male"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:id="@+id/imgButton"/>
+        android:id="@+id/imgButton"
+        android:contentDescription="ImageMan"
+        tools:ignore="HardcodedText" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="31dp"
         android:text=""
         android:id="@+id/message"/>
-
 </LinearLayout>

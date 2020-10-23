@@ -32,6 +32,9 @@
     <string name="positiveButton">Yes, I want to</string>
     <string name="negativeButton">No, I don\'t want to</string>
     <string name="toastDeleteMessage">Message deleted</string>
+    <string name="row">Row</string>
+    <string name="id">ID</string>
+    <string name="text">Text</string>
     <string name="weather">Weather Forecast</string>
     <string name="curTemp">Temp right now</string>
     <string name="minTemp">Min Temp</string>
