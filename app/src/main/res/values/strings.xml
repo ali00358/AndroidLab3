@@ -5,6 +5,7 @@
     <string name="text1">Look at my GUI</string>
     <string name="clickHere">CLICK HERE</string>
     <string name="check">Check this out!</string>
+    <string name="check2">Is a Send message</string>
     <string name="switchText">Switch on/off</string>
     <string name="toastMessage">Here is more information</string>
     <string name="snack1">The switch is now </string>
@@ -27,6 +28,7 @@
     <string name="goLog">Go to log file</string>
     <string name="sendButton">Send</string>
     <string name="receiveButton">Receive</string>
+    <string name="hideButton">Hide</string>
     <string name="alertDialogTitle">Delete Message</string>
     <string name="alertMessageOne">Do you want to delete this?</string>
     <string name="positiveButton">Yes, I want to</string>
@@ -37,4 +39,6 @@
     <string name="minTemp">Min Temp</string>
     <string name="maxTemp">Max Temp</string>
     <string name="uv">UV Ratings</string>
+
+    <string name="hellofragment">Message Here</string>
 </resources>

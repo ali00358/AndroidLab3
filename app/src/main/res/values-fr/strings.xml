@@ -6,6 +6,7 @@
     <string name="text1">Regardez mon GUI!</string>
     <string name="clickHere">CLIQUEZ ICI</string>
     <string name="check">Voila!</string>
+    <string name="check2">Message Envoyer</string>
     <string name="switchText">Allumer/éteindre</string>
     <string name="toastMessage">Pour plus d\'information, allez ici</string>
     <string name="snack1">L\'interrupteur est maintenant </string>
@@ -28,6 +29,7 @@
     <string name="goLog">Fil de Log</string>
     <string name="sendButton">Envoyer</string>
     <string name="receiveButton">Récevoir</string>
+    <string name="hideButton">Cacher</string>
     <string name="alertDialogTitle">Supprimer message</string>
     <string name="alertMessageOne">Voulez-vous supprimmer ce message?</string>
     <string name="positiveButton">Oui, je veux</string>
@@ -38,4 +40,5 @@
     <string name="minTemp">Température minimale</string>
     <string name="maxTemp">Température maximale</string>
     <string name="uv">Évaluation UV</string>
+    <string name="hellofragment">Message Ici</string>
 </resources>

@@ -1,10 +1,12 @@
 package com.example.androidlab2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -21,6 +23,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ChatActivity extends AppCompatActivity {
+    public static final String ITEM_SELECTED = "ITEM";
+    public static final String ITEM_POSITION = "POSITION";
+    public static final String ITEM_ID = "ID";
+
     private ArrayList<Message> messageArr = new ArrayList<>();
     MyListAdapter myAdapter; //adapter to control items in the list view
     SQLiteDatabase db;
@@ -32,8 +38,33 @@ public class ChatActivity extends AppCompatActivity {
 
         loadMessagesFromDatabase();
 
+        boolean isTablet = findViewById(R.id.frameLayout) != null;
         ListView messages = findViewById(R.id.messages);
         messages.setAdapter(myAdapter = new MyListAdapter());
+
+        messages.setOnItemClickListener((list, item, position, id) -> {
+
+            Bundle dataToPass = new Bundle();
+            dataToPass.putString(ITEM_SELECTED, String.valueOf(item));
+            dataToPass.putInt(ITEM_POSITION, position);
+            dataToPass.putLong(ITEM_ID, id);
+
+            if(isTablet){
+                DetailsFragment dFragment = new DetailsFragment(); //add a DetailFragment
+                dFragment.setArguments( dataToPass); //pass it a bundle for information
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentLocation, dFragment) //Add the fragment in FrameLayout
+                        .commit(); //actually load the fragment.
+            } else {
+                {
+                    Intent nextActivity = new Intent(ChatActivity.this, EmptyActivity.class);
+                    nextActivity.putExtras(dataToPass); //send data to next activity
+                    startActivity(nextActivity); //make the transition
+                }
+            }
+
+        });
 
         messages.setOnItemLongClickListener( (p, b, pos, id) -> {
             deleteMessage(pos);

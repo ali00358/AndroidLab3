@@ -15,16 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.androidlab2.ChatActivity" />
-        <activity android:name="com.example.androidlab2.ProfileActivity" />
-        <activity android:name="com.example.androidlab2.MainActivity">
+        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WeatherForecast"></activity>
+        <activity android:name=".WeatherForecast" />
     </application>
 
 </manifest>
