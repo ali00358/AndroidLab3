@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/item1"
+        android:title="@string/goChat"
+        android:icon="@drawable/chrome"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item android:id="@+id/item2"
+        android:icon="@drawable/edge"
+        android:title="@string/loginButton"
+        app:showAsAction="always"
+        android:orderInCategory="400"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/item3"
+        android:icon="@drawable/firefox"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:title="@string/weather"
+        tools:ignore="HardcodedText" />
+
+    <item android:id="@+id/overflow"
+        android:title="Overflow"
+        app:showAsAction="never"
+        android:orderInCategory="400"
+        tools:ignore="HardcodedText" />
+</menu>

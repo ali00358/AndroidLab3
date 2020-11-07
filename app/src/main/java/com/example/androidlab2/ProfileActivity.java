@@ -31,6 +31,10 @@ public class ProfileActivity extends AppCompatActivity {
         Button weatherButton = findViewById(R.id.weatherButton);
         Intent weatherForecast = new Intent(this, WeatherForecast.class);
         weatherButton.setOnClickListener((click) -> startActivity(weatherForecast));
+
+        Button toolbarButton = findViewById(R.id.toolbarButton);
+        Intent toolbarB = new Intent(this, TestToolbar.class);
+        toolbarButton.setOnClickListener((click) -> startActivity(toolbarB));
     }
 
     @Override

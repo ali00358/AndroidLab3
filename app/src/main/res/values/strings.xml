@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">Android Labs</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Internet Browser Picker</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="text1">Look at my GUI</string>
@@ -39,6 +39,20 @@
     <string name="minTemp">Min Temp</string>
     <string name="maxTemp">Max Temp</string>
     <string name="uv">UV Ratings</string>
-
-    <string name="hellofragment">Message Here</string>
+    <string name="isSend">Is a sent message</string>
+    <string name="hide">Hide</string>
+    <string name="message_here">Message Here</string>
+    <string name="send">Send</string>
+    <string name="message">Message…</string>
+    <string name="receive">Receive</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="chrome">Chrome</string>
+    <string name="edge">MS Edge</string>
+    <string name="firefox">Firefox</string>
+    <string name="navigation_drawer_open" tools:keep="@string/navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close" tools:keep="@string/navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" tools:keep="@string/nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle" tools:keep="@string/nav_header_subtitle">Lab no 8</string>
+    <string name="nav_header_desc" tools:keep="@string/nav_header_desc">Navigation header</string>
 </resources>

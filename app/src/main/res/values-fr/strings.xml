@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Labs Android</string>
     <string name="hello_message">Bonjour le monde!</string>
     <string name="ButtonText">Je suis un bouton</string>
@@ -40,5 +40,21 @@
     <string name="minTemp">Température minimale</string>
     <string name="maxTemp">Température maximale</string>
     <string name="uv">Évaluation UV</string>
-    <string name="hellofragment">Message Ici</string>
+    <string name="isSend">Message envoyé</string>
+    <string name="hide">Cacher</string>
+    <string name="message_here">Message ici</string>
+    <string name="send">Envoyer</string>
+    <string name="message">Message…</string>
+    <string name="receive">Recevoir</string>
+    <string name="chrome">Chrome</string>
+    <string name="edge">MS Edge</string>
+    <string name="firefox">Firefox</string>
+    <string name="open">Ouvert</string>
+    <string name="close">Fermer</string>
+    <string name="navigation_drawer_open" tools:keep="@string/navigation_drawer_open">Ouvert navigation drawer</string>
+    <string name="navigation_drawer_close" tools:keep="@string/navigation_drawer_close">Fermer navigation drawer</string>
+    <string name="nav_header_title" tools:keep="@string/nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle" tools:keep="@string/nav_header_subtitle">Lab no 8</string>
+    <string name="nav_header_desc" tools:keep="@string/nav_header_desc">Entête Navigation</string>
+
 </resources>
